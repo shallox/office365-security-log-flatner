@@ -1,4 +1,4 @@
-# office365-security-log-flatner
+# office365-security-log-flattner
 Tool to flatten out the json blob in office365 security log entries.
 
 Written in python3.8 (F strings are used so 3.6 or higher a must).
