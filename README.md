@@ -1,32 +1,35 @@
 # office365-security-log-flattner
-Tool to flatten out the json blob in office365 security log entries.
+
+
+### Tool to flatten out the json blob in office365 security log .csv exports.
 
 Written in python3.8 (F strings are used so 3.6 or higher a must).
 
-Python packages required:
-pandas
+#### Python packages required:
 
+[Pandas](https://pandas.pydata.org/)
+
+```
 pip install pandas
+```
 
 
 
-How to use:
+# How to:
 
-Using power shell run something like the below set of commands to generate an input for this script:
-
-Install-Module ExchangeOnlineManagement
-Import-Module ExchangeOnlineManagement
-Connect-ExchangeOnline
+Using powershell run something like the below set of commands to generate an input .csv for this script:
 
 
-Once signed in using an account that has rights to serch audit log, run the following command to generate a CSV output.
-
-Search-UnifiedAuditLog -StartDate 05-01-2021 -EndDate 05-15-2021 -userids <upn> | export-csv <path to .csv>
+```Install-Module ExchangeOnlineManagement | Import-Module ExchangeOnlineManagement | Connect-ExchangeOnline |
+Search-UnifiedAuditLog -StartDate 05-01-2021 -EndDate 05-15-2021 -userids <upn> | export-csv <export.csv>
+```
   
 To run this script use the following command:
-  python office365-security-log-flattner.py <path to .csv> <path to save .xlsx>
 
+```
+python office365-security-log-flattner.py <input.csv> <output.xlsx>
+```
   
 Output will ge generate into a xlsx file and each operation type will be in it's own tab.
   
-  Enjoy!
+Enjoy!
