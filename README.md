@@ -30,6 +30,6 @@ Search-UnifiedAuditLog -StartDate 05-01-2021 -EndDate 05-15-2021 -userids <upn> 
 python office365-security-log-flattner.py <input.csv> <output.xlsx>
 ```
   
-##### Output will ge generate into a xlsx file and each operation type will be in it's own tab.
+##### Output will be generate into a xlsx file and each operation type will be in it's own sheet.
   
 # Enjoy!
